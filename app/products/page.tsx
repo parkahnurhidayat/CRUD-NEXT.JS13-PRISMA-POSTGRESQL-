@@ -5,6 +5,8 @@ import DeleteProduct from "./deleteProduct";
 import UpdateProduct from "./updateProduct";
 const prisma = new PrismaClient()
 
+export const dynamic = "force-dynamic";
+
 const getProducts = async () => {
     const res = await  prisma.product.findMany({
         select: {
